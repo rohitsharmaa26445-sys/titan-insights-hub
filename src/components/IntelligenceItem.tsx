@@ -31,11 +31,11 @@ const IntelligenceItem = ({ event, index }: Props) => {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.08, duration: 0.35 }}
-      className="flex items-start gap-3.5 px-4 py-3.5 rounded-xl hover:bg-[rgba(255,255,255,0.03)] transition-colors cursor-pointer group"
+      className="flex items-start gap-2.5 sm:gap-3.5 px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl hover:bg-[rgba(255,255,255,0.03)] transition-colors cursor-pointer group"
     >
       {/* Icon */}
       <div
-        className="shrink-0 w-9 h-9 rounded-lg flex items-center justify-center"
+        className="shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center"
         style={{ backgroundColor: `${config.color}15` }}
       >
         <Icon className="w-4 h-4" style={{ color: config.color }} />
@@ -64,7 +64,7 @@ const IntelligenceItem = ({ event, index }: Props) => {
       </div>
 
       {/* Time */}
-      <div className="shrink-0 flex items-center gap-1 text-muted-foreground pt-0.5">
+      <div className="shrink-0 hidden sm:flex items-center gap-1 text-muted-foreground pt-0.5">
         <Clock className="w-3 h-3" />
         <span className="text-[11px] italic">{event.time}</span>
       </div>
